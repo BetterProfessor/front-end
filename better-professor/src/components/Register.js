@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   const { register, handleSubmit, errors } = useForm();
@@ -8,6 +9,9 @@ export default function Register() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <Link to={"/"}>
+        <div>Home</div>
+      </Link>
       <input
         type="text"
         placeholder="User Name"

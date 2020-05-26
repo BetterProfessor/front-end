@@ -1,13 +1,17 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function App() {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
   console.log(errors);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <Link to={"/Register"}>
+        <div>register</div>
+      </Link>
       <input
         type="text"
         placeholder="User Name"
