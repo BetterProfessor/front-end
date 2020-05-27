@@ -1,21 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
+import {AppContext} from "../AppContext"
 import axios from "axios";
 
+
 const Dashboard = () => {
+  const [currentUser, setCurrentUser]=useContext(AppContext)
+  console.log(currentUser)
   const [students, setStudents] = useState([]);
+
+  const token = JSON.parse(localStorage.getItem('token'));
   useEffect(() => {
-    axios.get("https://better-prof.herokuapp.com/api/students").then((res) => {
-      setStudents(res.data);
-      console.log(res.data);
-    });
-  });
+    axios.get("https://better-prof.herokuapp.com/api/students", {
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((res) => {
+        console.log(res);
+        console.log(token)
+        setStudents(res.data);
+      })
+      .catch(error=>{
+        console.log(token)
+        console.log(error)
+      })
+  },[]);
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
   console.log(errors);
 
   return (
     <div>
+      <h1>Welcome, {currentUser}</h1>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="forms"

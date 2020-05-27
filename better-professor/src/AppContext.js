@@ -5,9 +5,9 @@ export const AppContext=createContext();
 
 
 export const AppProvider=props=>{
-    const [state, setState]=useState()
+    const [currentUser, setCurrentUser]=useState()
     return(
-        <AppContext.Provider>
+        <AppContext.Provider value={[currentUser, setCurrentUser]}>
             {props.children}
         </AppContext.Provider>
     );
