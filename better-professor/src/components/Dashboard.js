@@ -16,16 +16,18 @@ const Dashboard = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <input
+          className="forms"
           type="text"
           placeholder="Student Name"
           name="User Name"
           ref={register({ required: true, max: 15, min: 2, maxLength: 100 })}
         />
         <input
+          className="forms"
           type="email"
-          placeholder="Email"
+          placeholder="Student Email"
           name="Email"
           ref={register({ required: true, max: 20, min: 2 })}
         />
