@@ -8,23 +8,23 @@ export default function Register() {
   console.log(errors);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Link to={"/"}>
-        <div>Home</div>
-      </Link>
+    <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <input
+        className="forms"
         type="text"
         placeholder="User Name"
         name="User Name"
         ref={register({ required: true, max: 15, min: 2, maxLength: 100 })}
       />
       <input
+        className="forms"
         type="text"
         placeholder="Password"
         name="Password"
         ref={register({ required: true, max: 20, min: 2 })}
       />
       <input
+        className="forms"
         type="email"
         placeholder="Email"
         name="Email"
