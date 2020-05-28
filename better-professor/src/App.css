@@ -50,3 +50,10 @@ link {
   text-decoration: none;
   color: red;
 }
+.studentList{
+  background-color: aliceblue;
+  width: 80%;
+}
+.studentCard{
+  background-color: rgb(174, 248, 242);
+}

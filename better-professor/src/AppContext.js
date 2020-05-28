@@ -1,13 +1,15 @@
 import React, {useState, createContext} from 'react';
 import {axiosWithAuth} from './utils/axiosWithAuth'
 
+
 export const AppContext=createContext();
 
 
 export const AppProvider=props=>{
-    const [currentUser, setCurrentUser]=useState()
+    const [students, setStudents]=useState([])
+    const [projects, setProjects]=useState([])
     return(
-        <AppContext.Provider value={[currentUser, setCurrentUser]}>
+        <AppContext.Provider value={[students, setStudents]}>
             {props.children}
         </AppContext.Provider>
     );

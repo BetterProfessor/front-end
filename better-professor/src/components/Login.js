@@ -6,14 +6,13 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import {useHistory} from "react-router-dom";
 
 
-const postLogin=(credentials, match, setCurrentUser)=>{
+const postLogin=(credentials, match)=>{
   axiosWithAuth()
   .post('/login', credentials)
   .then(res=>{
     localStorage.setItem('token', JSON.stringify(res.data.token));
     console.log(res.data.token)
     match.push(`/dashboard`)
-    setCurrentUser(credentials.username)
   })
   .catch(err=>{
     console.log(err, "Failed to login")
@@ -25,7 +24,7 @@ const Login=()=> {
   const [currentUser, setCurrentUser] = useContext(AppContext);
   console.log(currentUser)
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => postLogin(data, match, setCurrentUser);
+  const onSubmit = (data) => postLogin(data, match);
   console.log(errors);
 
   return (
