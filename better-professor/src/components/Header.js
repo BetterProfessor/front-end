@@ -5,13 +5,21 @@ export default function header() {
   return (
     <div className="back">
       <nav className="links">
-        <h1>Better Professor</h1>
-        <Link className="navLinks" to={"/Register"}>
-          Register{" "}
-        </Link>
-        <Link className="navLinks" to={"/"}>
-          Login{" "}
-        </Link>
+        <div>
+          <Link className="navLinks" to={"/Dashboard"}>
+            Dashboard{" "}
+          </Link>
+        </div>
+        <div>
+          <Link className="navLinks" to={"/Register"}>
+            Register{" "}
+          </Link>
+        </div>
+        <div>
+          <Link className="navLinks" to={"/"}>
+            Login{" "}
+          </Link>
+        </div>
       </nav>
     </div>
   );

@@ -5,8 +5,8 @@ import Register from "./components/Register";
 
 import Header from "./components/Header";
 
-import {AppProvider} from "./AppContext"
-import PrivateRoute from "./utils/PrivateRoute"
+import { AppProvider } from "./AppContext";
+import PrivateRoute from "./utils/PrivateRoute";
 
 import "./App.css";
 import Dashboard from "./components/Dashboard";
@@ -17,9 +17,10 @@ function App() {
     <AppProvider>
       <div className="App">
         <Header />
+        <h1>Better Professor</h1>
         <Route exact path="/" component={Login} />
         <Route path="/Register" component={Register} />
-        <PrivateRoute path='/dashboard' component={Dashboard} />
+        <PrivateRoute path="/dashboard" component={Dashboard} />
       </div>
     </AppProvider>
   );

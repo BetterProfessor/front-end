@@ -15,7 +15,7 @@ const Dashboard = () => {
   console.log(errors);
 
   return (
-    <div>
+    <div className="background">
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="forms"
@@ -32,7 +32,7 @@ const Dashboard = () => {
           ref={register({ required: true, max: 20, min: 2 })}
         />
 
-        <input type="submit" />
+        <input className="forms" type="submit" />
       </form>
       {students.map((student) => (
         <p>
