@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 
 const deleteReminder=(id, refreshReminderList)=>{
     axiosWithAuth()
-        .delete(`/reminders/${id}`)
+        .delete(`/projects/reminders/${id}`)
         .then(res=>{
             console.log('Student Deleted')
             refreshReminderList()
@@ -15,7 +15,7 @@ const deleteReminder=(id, refreshReminderList)=>{
 }
 const finalizeReminder=(id, refreshReminderList, reminder, toggleEdit, edit)=>{
     axiosWithAuth()
-        .put(`/reminders/${id}`, reminder)
+        .put(`/projects/reminders/${id}`, reminder)
         .then(res=>{
             console.log('Reminder Editted')
             toggleEdit(!edit)

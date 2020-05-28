@@ -7,13 +7,14 @@ import jwt from 'jsonwebtoken' //Needed to capture Username
 
 const postNewReminder=(newReminder, refreshReminderList)=>{
     axiosWithAuth()
-    .post('/reminders', newReminder)
+    .post('/projects/reminders', newReminder)
     .then(res=>{
-      console.log(res.data)
+      console.log(res.data, 'Success reminder added')
       refreshReminderList()
     })
     .catch(err=>{
-      console.log(err, "Failed to post new student")
+      console.log(err, "Failed to post new Reminder")
+      console.log(newReminder)
     })
 }
 
@@ -28,7 +29,7 @@ const Reminders = () => {
 
     const refreshReminderList=()=>{
         axiosWithAuth()
-        .get("/reminders")
+        .get("/projects/reminders/get")
         .then((res)=>{
           console.log(res);
           setReminders(res.data)
@@ -61,7 +62,7 @@ const Reminders = () => {
             <div>
             <form onSubmit={handleSubmit(submitReminders)}>
                 <input type="text" placeholder="Student Name" name="studentName" ref={register({required: true, max: 15, min: 2, maxLength: 300})} />
-                <input type="datetime" placeholder="Due date" name="dueDate" ref={register({required: true, max: 30, min: 2, maxLength: 300})} />
+                <input type="date" placeholder="Due date" name="dueDate" ref={register({required: true, max: 30, min: 2, maxLength: 300})} />
                 <input type="time" placeholder="Time Due" name="dueTime" ref={register({max: 20, min: 2})} />
                 <textarea name="reminder" ref={register({max: 300, min: 2, maxLength: 300})} />
                 <input type="submit" />
