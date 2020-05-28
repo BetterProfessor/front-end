@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useForm } from "react-hook-form";
 import StudentCard from "./StudentCard";
-import {AppContext} from "../../AppContext"
+import {StudentsContext} from "../../contexts/AppContext"
 import {axiosWithAuth} from "../../utils/axiosWithAuth";
 import axios from "axios"; //for David's axios call
 import jwt from 'jsonwebtoken' //Needed to capture Username
@@ -24,7 +24,9 @@ const Students = () =>{
     jwt.verify(token, secret, (error, decodedToken) => {
         user = decodedToken;
     });
-    const [students, setStudents] = useContext(AppContext);
+    const [students, setStudents] = useContext(StudentsContext)
+    // const students = useContext(AppContext);
+    // const setStudents = useContext(AppContext);
 
     const refreshStudentList = () =>{
         const token = JSON.parse(localStorage.getItem('token'));
@@ -34,7 +36,7 @@ const Students = () =>{
             },
           })
             .then((res) => {
-              console.log(res);
+              console.log(res, 'STUDENT LIST GET');
               setStudents(res.data);
             })
             .catch(error=>{

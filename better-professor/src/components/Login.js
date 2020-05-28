@@ -1,7 +1,5 @@
 import React, {useContext} from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-import {AppContext} from "../AppContext"
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import {useHistory} from "react-router-dom";
 
@@ -21,8 +19,6 @@ const postLogin=(credentials, match)=>{
 
 const Login=()=> {
   const match=useHistory();
-  const [currentUser, setCurrentUser] = useContext(AppContext);
-  console.log(currentUser)
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => postLogin(data, match);
   console.log(errors);

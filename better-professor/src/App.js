@@ -5,7 +5,7 @@ import Register from "./components/Register";
 
 import Header from "./components/Header";
 
-import {AppProvider} from "./AppContext"
+import {AppProvider} from "./contexts/AppContext"
 import PrivateRoute from "./utils/PrivateRoute"
 
 import "./App.css";

@@ -41,7 +41,7 @@ const ProjectCard = ({project, refreshProjectList})=>{
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" placeholder="Project Name" name="projectName" ref={register({required: true, max: 15, min: 2, maxLength: 100})} />
-                <input type="email" placeholder="Project Email" name="projectEmail" ref={register({required: true, max: 20, min: 2})} />
+                <input type="text" placeholder="Project Type" name="projectType" ref={register({required: true, max: 20, min: 2})} />
                 <input type="submit" />
             </form>
             

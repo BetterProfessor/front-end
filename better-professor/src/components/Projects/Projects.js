@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useForm } from "react-hook-form";
 import ProjectCard from "../Projects/ProjectCard";
-import {AppContext} from "../../AppContext"
+import {ProjectsContext} from "../../contexts/AppContext"
 import {axiosWithAuth} from "../../utils/axiosWithAuth";
 import jwt from 'jsonwebtoken' //Needed to capture Username
 
@@ -24,8 +24,9 @@ const Projects = () => {
     jwt.verify(token, secret, (error, decodedToken) => {
         user = decodedToken;
     });
-    
-    const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useContext(ProjectsContext)
+    // const projects = useState(AppContext);
+    // const setProjects = useContext(AppContext);
 
     const refreshProjectList=()=>{
         axiosWithAuth()
@@ -56,6 +57,7 @@ const Projects = () => {
     console.log(errors);
     return(
         <div>
+            <h1>Projects</h1>
             <div>
                 <form onSubmit={handleSubmit(submitProjects)}>
                 <input type="text" placeholder="Project Name" name="projectName" ref={register({required: true, max: 15, min: 2, maxLength: 300})} />
