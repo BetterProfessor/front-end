@@ -30,12 +30,12 @@ h1 {
   text-align: center;
   margin: 0 auto;
   font-size: 5rem;
-  color: red;
+  color: #fa5858;
   margin-bottom: 15%;
 }
 .back {
   display: flex;
-  background-color: black;
+  background-color: #31343a;
   height: 50px;
   margin-bottom: 125px;
 }
@@ -52,15 +52,15 @@ link {
 }
 .navLinks {
   font-size: 2rem;
-  color: red;
+  color: #fa5858;
   text-decoration: none;
 }
 .navLinks:hover {
   text-decoration: none;
-  color: white;
+  color: #60e96e;
 }
 .background {
-  background-color: black;
+  background-color: #31343a;
   width: 35%;
   margin: 0 auto;
   border-radius: 25px;
