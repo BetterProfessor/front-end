@@ -8,21 +8,28 @@ export default function header() {
           <img class="imglogo" src={require("../assets/NavIcon.png")} ></img>
           <h2 class="logo">Better Professor</h2>
         </div>
-    
-     <nav>
-         <a href="index.html">Home</a>
-         <a href="Team.html">Team</a>
-         <Link to={'Dashboard'}>
-           Dashboard
+      <div style={{width: '70%', display: 'flex'}}>
+        <nav>
+            <Link to={'/'}>
+              Home
+            </Link>
+          <Link to={'/'}>
+            Team
           </Link>
-         <Link to={'/Register'}>
-          SignUp
-         </Link>
-         <Link to={'/'}>
-          Login
-         </Link>
+    
+          <Link to={'Dashboard'}>
+            Dashboard
+            </Link>
+          <Link to={'/Register'}>
+            SignUp
+          </Link>
+          <Link to={'/'}>
+            Login
+          </Link>
+          
+        </nav>
+      </div>
          
-     </nav>    
     </header>
     // <div className='back'>
     //   <nav className='links'>

@@ -26,7 +26,7 @@ h1 {
   text-align: center;
   margin: 0 auto;
   font-size: 3rem;
-  color: white;
+  color: black;
 }
 .back {
   display: flex;
@@ -80,18 +80,19 @@ header {
 
 
 nav {
-  width: 50%;
+  margin-left: 40%;
+  width: 70%;
   display: flex;
   padding: 2rem;
+  justify-content: space-evenly;
 }
 
 
 nav a {
   color: #f5f5f5;
   opacity: 60%;
-  padding: 0 2rem;
-  margin: 0 4rem;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 
 nav a:hover {

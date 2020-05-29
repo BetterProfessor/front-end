@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1>Welcome, {user.username}</h1>
+      <h1 style={{color: 'white'}}>Welcome, {user.username}.</h1>
       <Students />
       {/*Project Forms and Render*/}
       <Projects />

@@ -63,7 +63,7 @@ const Students = () =>{
         <div>
             <div>
                 <form className="form" onSubmit={handleSubmit(submitStudent)}>
-                    <h2>Add Student</h2>
+                    <h2 style={{color: 'white'}}>Add Student</h2>
                     <input
                         className="forms"
                         type="text"
