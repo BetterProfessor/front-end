@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {axiosWithAuth} from "../../utils/axiosWithAuth";
 import { useForm } from 'react-hook-form';
 
-const deleteStudent=(id, refreshStudentList)=>{
+const deleteStudent=(id, refreshStudentList, student)=>{
     axiosWithAuth()
         .delete(`/students/${id}`)
         .then(res=>{
@@ -10,6 +10,8 @@ const deleteStudent=(id, refreshStudentList)=>{
             refreshStudentList()
         })
         .catch(err=>{
+            console.log(student)
+            console.log(id)
             console.log(err, "Failed to delete Student")
         })
 }
@@ -35,7 +37,7 @@ const StudentCard = ({student, refreshStudentList})=>{
         edit===false?
         <div className="studentCard">
             <h2>{student.studentName} {student.studentEmail}</h2>
-            <button onClick={()=>deleteStudent(student.id, refreshStudentList)}>Delete</button>
+            <button onClick={()=>deleteStudent(student.id, refreshStudentList, student)}>Delete</button>
             <button onClick={()=>toggleEdit(!edit)}>Edit</button>
         </div>:
         <div>
