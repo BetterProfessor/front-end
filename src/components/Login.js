@@ -23,6 +23,8 @@ const Login = () => {
   console.log(errors)
 
   return (
+    <div className="background">
+      <h1 style={{color: 'white'}}>Login</h1>
     <form className='form' onSubmit={handleSubmit(onSubmit)}>
       <input
         className='forms'
@@ -39,9 +41,10 @@ const Login = () => {
         ref={register({ required: true, max: 20, min: 2 })}
       />
 
-      <input type='submit' />
+      <input className="forms" type='submit' />
       <p></p>
     </form>
+    </div>
   )
 }
 

@@ -57,15 +57,15 @@ const Reminders = () => {
     const { register, handleSubmit, errors } = useForm();
     console.log(errors);
     return(
-        <div>
-            <h1>Reminders</h1>
+        <div className="background">
+            <h1 style={{color: 'white'}}>Reminders</h1>
             <div>
-            <form onSubmit={handleSubmit(submitReminders)}>
-                <input type="text" placeholder="Student Name" name="studentName" ref={register({required: true, max: 15, min: 2, maxLength: 300})} />
-                <input type="date" placeholder="Due date" name="dueDate" ref={register({required: true, max: 30, min: 2, maxLength: 300})} />
-                <input type="time" placeholder="Time Due" name="dueTime" ref={register({max: 20, min: 2})} />
-                <textarea name="reminder" ref={register({max: 300, min: 2, maxLength: 300})} />
-                <input type="submit" />
+            <form onSubmit={handleSubmit(submitReminders)} className="form">
+                <input className="forms" type="text" placeholder="Student Name" name="studentName" ref={register({required: true, max: 15, min: 2, maxLength: 300})} />
+                <input className="forms" type="date" placeholder="Due date" name="dueDate" ref={register({required: true, max: 30, min: 2, maxLength: 300})} />
+                <input className="forms" type="time" placeholder="Time Due" name="dueTime" ref={register({max: 20, min: 2})} />
+                <textarea className="forms" name="reminder" placeholder="Reminder" ref={register({max: 300, min: 2, maxLength: 300})} />
+                <input className="forms" type="submit" />
             </form>
             </div>
             <div style={{display: 'flex', justifyContent: 'center'}}>

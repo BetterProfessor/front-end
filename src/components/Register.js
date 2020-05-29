@@ -22,6 +22,8 @@ export default function Register() {
   console.log(errors);
 
   return (
+    <div className="background">
+      <h1 style={{color: 'white'}}>Register</h1>
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <input
         className="forms"
@@ -45,7 +47,8 @@ export default function Register() {
         ref={register({ max: 25, min: 5 })}
       />
 
-      <input type="submit" />
+      <input className="forms" type="submit" />
     </form>
+    </div>
   );
 }

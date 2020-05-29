@@ -61,7 +61,7 @@ const Students = () =>{
 
     return(
         <div>
-            <div>
+            <div className="background">
                 <form className="form" onSubmit={handleSubmit(submitStudent)}>
                     <h2 style={{color: 'white'}}>Add Student</h2>
                     <input
@@ -79,7 +79,7 @@ const Students = () =>{
                         ref={register({ required: true, max: 20, min: 2 })}
                     />
 
-                    <input type="submit" />
+                    <input className="forms" type="submit" />
                 </form>
             </div>
         <div style={{display: 'flex', justifyContent: 'center'}}>

@@ -56,13 +56,13 @@ const Projects = () => {
     const { register, handleSubmit, errors } = useForm();
     console.log(errors);
     return(
-        <div>
-            <h1>Projects</h1>
+        <div className='background'>
+            <h1 style={{color: 'white'}}>Projects</h1>
             <div>
-                <form onSubmit={handleSubmit(submitProjects)}>
-                <input type="text" placeholder="Project Name" name="projectName" ref={register({required: true, max: 15, min: 2, maxLength: 300})} />
-                <input type="text" placeholder="Project Type" name="projectType" ref={register({required: true, max: 300, min: 2, maxLength: 300})} />
-                <input type="submit" />
+                <form className="form" onSubmit={handleSubmit(submitProjects)}>
+                <input className="forms" type="text" placeholder="Project Name" name="projectName" ref={register({required: true, max: 15, min: 2, maxLength: 300})} />
+                <input className="forms" type="text" placeholder="Project Type" name="projectType" ref={register({required: true, max: 300, min: 2, maxLength: 300})} />
+                <input className="forms" type="submit" />
                 </form>
             </div>
             <div style={{display: 'flex', justifyContent: 'center'}}>
