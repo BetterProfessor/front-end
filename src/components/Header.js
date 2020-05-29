@@ -11,10 +11,10 @@ export default function header() {
         </div>
       <div style={{width: '70%', display: 'flex'}}>
         <nav>
-            <Link to={'/'}>
+            <Link to={'https://wonderful-kilby-83886d.netlify.app/index.html'}>
               Home
             </Link>
-          <Link to={'/'}>
+          <Link to={'https://wonderful-kilby-83886d.netlify.app/team'}>
             Team
           </Link>
     
