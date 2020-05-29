@@ -10,7 +10,6 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
   font-size: 2rem;
 }
@@ -20,7 +19,6 @@
   width: 100%;
 }
 h1 {
-  width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -55,8 +53,7 @@ link {
 }
 
 header {
-  display: flex;
-  background-color:#31343A;
+  background-color: #31343a;
   align-items: left;
   width: 100%;
 }
@@ -77,8 +74,6 @@ header {
   text-align: left;
 }
 
-
-
 nav {
   margin-left: 40%;
   width: 70%;
@@ -86,7 +81,6 @@ nav {
   padding: 2rem;
   justify-content: space-evenly;
 }
-
 
 nav a {
   color: #f5f5f5;
@@ -96,6 +90,6 @@ nav a {
 }
 
 nav a:hover {
-  color: #60E96E;
+  color: #60e96e;
   opacity: 100%;
 }
