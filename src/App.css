@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 .App {
   text-align: center;
 }
@@ -5,11 +6,6 @@
   background: url('./assets/background.jpg');
   background-size: cover;
   min-height: 100vh;
-}
-nav {
-  margin-bottom: 125px;
-  display: flex;
-  justify-content: space-around;
 }
 .form {
   display: flex;
@@ -56,4 +52,49 @@ link {
 }
 .studentCard {
   background-color: rgb(174, 248, 242);
+}
+
+header {
+  display: flex;
+  background-color:#31343A;
+  align-items: left;
+  width: 100%;
+}
+
+.imglogo {
+  height: 46.17px;
+  margin-top: 1.2rem;
+  margin-left: 8rem;
+}
+
+.logo {
+  color: #f5f5f5;
+  font-family: 'Staatliches', cursive;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+
+
+nav {
+  width: 50%;
+  display: flex;
+  padding: 2rem;
+}
+
+
+nav a {
+  color: #f5f5f5;
+  opacity: 60%;
+  padding: 0 2rem;
+  margin: 0 4rem;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: #60E96E;
+  opacity: 100%;
 }
